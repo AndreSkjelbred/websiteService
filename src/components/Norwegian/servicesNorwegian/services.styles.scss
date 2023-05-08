@@ -1,0 +1,47 @@
+$color-primary: #101820;
+$color-primary-dark-1: #080c10;
+$color-primary-dark-2: #0d131a;
+
+$color-secondary: #f2aa4c;
+
+$bp-largest: 75em; //1200px/16 = 75
+$bp-large: 62.5em;
+$bp-medium: 43.75em;
+$bp-small: 37.5em;
+$bp-smallest: 31.25em;
+
+.services {
+  background-color: #282f36;
+  grid-column: center-start / center-end;
+  padding: 9.6rem 3rem;
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 6rem 3rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 6rem;
+    align-items: start;
+  }
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  row-gap: 1.5rem;
+  column-gap: 2.5rem;
+  align-items: center;
+  transition: transform 1.5s, opacity 1s;
+  &__icon {
+    height: 4.5rem;
+    width: 4.5rem;
+    color: $color-secondary;
+    // transform: translateY(-1rem);
+  }
+
+  &__paragraph {
+    grid-column: 1 / -1;
+  }
+}

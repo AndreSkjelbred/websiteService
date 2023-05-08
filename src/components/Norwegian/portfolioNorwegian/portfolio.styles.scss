@@ -1,0 +1,123 @@
+$color-primary: #101820;
+$color-primary-dark-1: #080c10;
+$color-primary-dark-2: #0d131a;
+
+$color-secondary: #f2aa4c;
+
+$bp-largest: 75em; //1200px/16 = 75
+$bp-large: 62.5em;
+$bp-medium: 43.75em;
+$bp-small: 37.5em;
+$bp-smallest: 31.25em;
+
+.portfolio {
+  padding: 15rem 0;
+  background-color: $color-primary;
+  grid-column: full-start / full-end;
+
+  background-image: linear-gradient(
+      rgba(16, 24, 32, 0.958),
+      rgba(16, 24, 32, 0.958)
+    ),
+    url(../../../img/pexels-photo-1492232.jpg);
+  background-position: center;
+  background-size: cover;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 10rem 0;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 6rem 0;
+  }
+
+  &__text-box {
+    max-width: 90rem;
+    margin: 0 auto;
+
+    @media only screen and (max-width: $bp-medium) {
+      max-width: 55rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      max-width: 45rem;
+    }
+  }
+
+  &__description {
+    font-size: 1.6rem;
+    color: $color-secondary;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+
+  &__websites {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 8rem;
+
+    max-width: 90rem;
+    margin: 0 auto;
+
+    @media only screen and (max-width: $bp-medium) {
+      max-width: 55rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      max-width: 45rem;
+      gap: 5rem;
+    }
+  }
+
+  &__website-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__website-description {
+    width: 90%;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__paragraph {
+    font-size: 1.5rem;
+    color: #eee;
+    line-height: 1.6;
+    letter-spacing: 1.1px;
+  }
+
+  &__img {
+    // border-radius: 9px;
+    max-width: 100%;
+    max-height: 30rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+
+    &:hover {
+      scale: 1.1;
+    }
+
+    &:active {
+      scale: 1;
+    }
+  }
+}
+
+.first-rank {
+  transition: transform 1.5s, opacity 1.5s;
+}
+
+.second-rank {
+  transition: transform 3s, opacity 3s;
+}
+
+.third-rank {
+  transition: transform 4s, opacity 4s;
+}

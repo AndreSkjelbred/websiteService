@@ -1,0 +1,100 @@
+.portfolio {
+  padding: 15rem 0;
+  background-color: #101820;
+  grid-column: full-start/full-end;
+  background-image: linear-gradient(rgba(16, 24, 32, 0.958), rgba(16, 24, 32, 0.958)), url(../../../img/pexels-photo-1492232.jpg);
+  background-position: center;
+  background-size: cover;
+}
+@media only screen and (max-width: 43.75em) {
+  .portfolio {
+    padding: 10rem 0;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .portfolio {
+    padding: 6rem 0;
+  }
+}
+.portfolio__text-box {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 43.75em) {
+  .portfolio__text-box {
+    max-width: 55rem;
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .portfolio__text-box {
+    max-width: 45rem;
+  }
+}
+.portfolio__description {
+  font-size: 1.6rem;
+  color: #f2aa4c;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.portfolio__websites {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 8rem;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 43.75em) {
+  .portfolio__websites {
+    max-width: 55rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .portfolio__websites {
+    max-width: 45rem;
+    gap: 5rem;
+  }
+}
+.portfolio__website-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.portfolio__website-description {
+  width: 90%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.portfolio__paragraph {
+  font-size: 1.5rem;
+  color: #eee;
+  line-height: 1.6;
+  letter-spacing: 1.1px;
+}
+.portfolio__img {
+  max-width: 100%;
+  max-height: 30rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+}
+.portfolio__img:hover {
+  scale: 1.1;
+}
+.portfolio__img:active {
+  scale: 1;
+}
+
+.first-rank {
+  transition: transform 1.5s, opacity 1.5s;
+}
+
+.second-rank {
+  transition: transform 3s, opacity 3s;
+}
+
+.third-rank {
+  transition: transform 4s, opacity 4s;
+}/*# sourceMappingURL=portfolio.styles.css.map */

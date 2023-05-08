@@ -1,0 +1,199 @@
+$color-primary: #101820;
+$color-primary-dark-1: #080c10;
+$color-primary-dark-2: #0d131a;
+
+$color-secondary: #f2aa4c;
+
+$bp-largest: 75em; //1200px/16 = 75
+$bp-large: 62.5em;
+$bp-medium: 43.75em;
+$bp-small: 37.5em;
+$bp-smallest: 31.25em;
+
+.app {
+    display: grid;
+    grid-template-rows: 90vh repeat(4, min-content);
+    grid-template-columns:
+      [sidebar-start] 26rem [sidebar-end full-start] minmax(6rem, 1fr)
+      [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+      [center-end]
+      minmax(6rem, 1fr)
+      [full-end];
+  
+    @media only screen and (max-width: $bp-large) {
+      grid-template-rows: 12rem 90vh repeat(4, min-content);
+      grid-template-columns:
+        [full-start] minmax(6rem, 1fr)
+        [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+        [center-end]
+        minmax(6rem, 1fr)
+        [full-end];
+    }
+  }
+
+.mb-hg {
+  margin-bottom: 8rem;
+}
+.mb-bg {
+  margin-bottom: 4.8rem;
+}
+.mb-md {
+  margin-bottom: 3.6rem;
+
+  @media only screen and (max-width: $bp-small) {
+    margin-bottom: 3rem;
+  }
+}
+.mb-sm {
+  margin-bottom: 2rem;
+}
+
+.mb-ws {
+  margin-bottom: 1rem;
+}
+
+.heading-1 {
+  font-size: 4.8rem;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+  font-weight: 600;
+
+  &--gold {
+    color: $color-secondary;
+  }
+}
+
+.heading-2 {
+  text-transform: uppercase;
+  font-size: 3.6rem;
+  letter-spacing: 1.7px;
+  line-height: 1.2;
+  color: $color-secondary;
+  font-weight: 300;
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 2.5rem;
+  }
+
+  &--blue {
+    color: $color-primary;
+  }
+}
+
+.heading-3 {
+  font-size: 3rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-weight: 500;
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 2.5rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 2rem;
+  }
+
+  &--gold {
+    color: $color-secondary;
+  }
+}
+
+.heading-4 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: $color-secondary;
+  font-weight: 300;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #aaa;
+
+  &--gold {
+    color: $color-secondary;
+  }
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: $color-secondary;
+  font-size: 2rem;
+  padding: 1.5rem 3rem;
+  border: 1px solid $color-secondary;
+  transition: all 0.3s;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: $color-secondary;
+  color: $color-primary;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //10px/16px = 62.5%
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%; //8px/16 = 50%
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #ccc;
+  font-weight: 300;
+  background-color: #e7e8e9;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 90vh repeat(4, min-content);
+  grid-template-columns:
+    [sidebar-start] 26rem [sidebar-end full-start] minmax(6rem, 1fr)
+    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end]
+    minmax(6rem, 1fr)
+    [full-end];
+
+  @media only screen and (max-width: $bp-large) {
+    grid-template-rows: 12rem 90vh repeat(4, min-content);
+    grid-template-columns:
+      [full-start] minmax(6rem, 1fr)
+      [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+      [center-end]
+      minmax(6rem, 1fr)
+      [full-end];
+  }
+}
+
+
+
+
+
+// .something {
+//   background-color: $color-primary-dark-1;
+//   grid-column: col-start 7 / -1;
+// }
+
+
+
+
+
+
+

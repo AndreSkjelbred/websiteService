@@ -1,0 +1,103 @@
+$color-primary: #101820;
+$color-primary-dark-1: #080c10;
+$color-primary-dark-2: #0d131a;
+
+$color-secondary: #f2aa4c;
+
+$bp-largest: 75em; //1200px/16 = 75
+$bp-large: 62.5em;
+$bp-medium: 43.75em;
+$bp-small: 37.5em;
+$bp-smallest: 31.25em;
+
+.header {
+  background-image: linear-gradient(
+      rgba(16, 24, 32, 0.958),
+      rgba(16, 24, 32, 0.958)
+    ),
+    url(../../../img/pexels-photo-3172740.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 8rem;
+  padding-top: 4rem;
+
+  grid-column: full-start / full-end;
+
+  display: grid;
+  grid-template-rows: 1fr min-content minmax(12rem, min-content) 8rem 1fr;
+  grid-template-columns: max-content;
+  row-gap: 1.5rem;
+
+  justify-content: center;
+  text-align: center;
+
+  @media only screen and (max-width: $bp-smallest) {
+    grid-template-columns: min-content;
+  }
+
+  // display: flex;
+  // align-items: center;
+  // flex-direction: column;
+  // justify-content: center;
+  // gap: 6rem;
+
+  &__logo {
+    // height: 20rem;
+    height: 10rem;
+    justify-self: center;
+
+    @media only screen and (max-width: $bp-small) {
+      height: 6rem;
+    }
+  }
+
+  &__btn {
+    align-self: start;
+    justify-self: center;
+  }
+
+  // &__text-box {
+  //   color: $color-secondary;
+  //   text-align: center;
+  //   text-transform: uppercase;
+  // }
+
+  // &__sub {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: space-around;
+  //   gap: 4rem;
+  // }
+
+  &__link:link,
+  &__link:visited {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: #ddd;
+    font-size: 1.8rem;
+    transition: all 0.2s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      background-color: #eee;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+
+    &:hover {
+      color: #eee;
+    }
+
+    &:hover::after {
+      transform: scale(1);
+      transform-origin: bottom left;
+    }
+  }
+}

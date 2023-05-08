@@ -1,0 +1,28 @@
+.about {
+  background-color: #0d131a;
+  grid-column: center-start/center-end;
+  padding: 9.6rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 6rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .about {
+    padding: 5rem 2rem;
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .about__text-box {
+    grid-row: 1/span 1;
+  }
+}
+.about__img {
+  width: 100%;
+}
+@media only screen and (max-width: 37.5em) {
+  .about__img {
+    width: 50%;
+  }
+}/*# sourceMappingURL=about.styles.css.map */

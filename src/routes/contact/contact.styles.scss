@@ -1,0 +1,32 @@
+$color-primary: #101820;
+$color-primary-dark-1: #080c10;
+$color-primary-dark-2: #0d131a;
+
+$color-secondary: #f2aa4c;
+
+$bp-largest: 75em; //1200px/16 = 75
+$bp-large: 62.5em;
+$bp-medium: 43.75em;
+$bp-small: 37.5em;
+$bp-smallest: 31.25em;
+
+.contact {
+  display: grid;
+    grid-template-rows: 80vh repeat(4, min-content);
+    grid-template-columns:
+      [sidebar-start] 26rem [sidebar-end full-start] minmax(6rem, 1fr)
+      [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+      [center-end]
+      minmax(6rem, 1fr)
+      [full-end];
+
+      @media only screen and (max-width: $bp-large) {
+        grid-template-rows: 12rem 80vh repeat(4, min-content);
+        grid-template-columns:
+          [full-start] minmax(6rem, 1fr)
+          [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+          [center-end]
+          minmax(6rem, 1fr)
+          [full-end];
+      }
+}

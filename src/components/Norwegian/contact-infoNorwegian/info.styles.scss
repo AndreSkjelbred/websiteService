@@ -1,0 +1,97 @@
+$color-primary: #101820;
+$color-primary-dark-1: #080c10;
+$color-primary-dark-2: #0d131a;
+
+$color-secondary: #f2aa4c;
+
+$bp-largest: 75em; //1200px/16 = 75
+$bp-large: 62.5em;
+$bp-medium: 43.75em;
+$bp-small: 37.5em;
+$bp-smallest: 31.25em;
+
+.info {
+    background-color: $color-primary-dark-1;
+    padding: 9.6rem 3rem;
+
+    grid-column: center-start / center-end;
+
+    &__griddy {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6rem;
+
+        justify-items: center;
+        align-items: center;
+
+        @media only screen and (max-width: $bp-large) {
+            grid-template-columns: minmax(min-content, 60rem);
+            justify-content: center;
+        }
+    }
+
+    &__box {
+        background-color: #eee;
+        padding: 3rem 6rem;
+        box-shadow: 0 3rem 5rem rgba(0, 0, 0, .15);
+        text-align: center;
+        width: 80%;
+
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        column-gap: 1rem;
+        row-gap: 1rem;
+
+        align-items: end;
+        justify-content: center;
+
+        @media only screen and (max-width: $bp-large) {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+    }
+
+    &__box-heading {
+        color: $color-primary;
+        font-size: 2.4rem;
+        margin-bottom: 1rem;
+    }
+
+    &__phone-number {
+        font-size: 3rem;
+        font-weight: 700;
+        color: $color-primary;
+
+        grid-column: 1 / -1;
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__mail {
+        font-size: 3rem;
+        font-weight: 700;
+        color: $color-primary;
+
+        grid-column: 1 / -1;
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__icon {
+        height: 4.5rem;
+      width: 4.5rem;
+      color: $color-secondary;
+      transform: translateY(-0.5rem);
+
+      justify-self: center;
+
+      @media only screen and (max-width: $bp-largest) {
+        height: 3rem;
+      width: 3rem;
+      }
+    }
+}

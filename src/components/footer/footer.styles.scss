@@ -1,0 +1,51 @@
+$color-primary: #101820;
+$color-primary-dark-1: #080c10;
+$color-primary-dark-2: #0d131a;
+
+$color-secondary: #f2aa4c;
+
+$bp-largest: 75em; //1200px/16 = 75
+$bp-large: 62.5em;
+$bp-medium: 43.75em;
+$bp-small: 37.5em;
+$bp-smallest: 31.25em;
+
+.footer {
+    background-color: $color-primary-dark-2;
+    grid-column: full-start / full-end;
+    padding: 8rem;
+  }
+  
+  .nav {
+    list-style: none;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    align-items: center;
+  
+    &__link:link,
+    &__link:visited {
+      display: block;
+      font-size: 1.6rem;
+      color: $color-secondary;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 1.5rem;
+      background-color: rgba(#fff, 0.05);
+      transition: all 0.2s;
+    }
+  
+    &__link:hover,
+    &__link:active {
+      color: #fff;
+      background: none;
+    }
+  }
+  
+  .copyright {
+    font-size: 1.4rem;
+    margin-top: 6rem;
+    text-align: center;
+  }
+  
